@@ -1,0 +1,58 @@
+.kotak-module {
+    width: 80%;
+    margin: auto;
+}
+#h2-module{
+    font-size: 25px;
+}
+.kotak-module h3{
+    font-size: 22px;
+}
+.kotak-module .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.kotak-module .card h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.kotak-module .card p {
+    margin: 10px 0;
+}
+.kotak-module .download-link {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+    .kotak-module {
+        width: 100%;
+        margin: auto;
+    }
+    .kotak-module h3{
+        text-align: center;
+        font-size: 18px;
+    }
+    #h2-module{
+        font-size: 22px;
+        text-align: center;
+    }
+    .kotak-module .card h3 {
+        text-align: center;
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .kotak-module .card p {
+        font-size: 14px;
+    }
+    }

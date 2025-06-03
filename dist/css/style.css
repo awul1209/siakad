@@ -1,0 +1,95 @@
+
+.kotak-admin{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.kotak-admin .kotak-card{
+    width: 24%;
+}
+/* end admin */
+
+/* guru */
+.kotak-guru{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.kotak-guru .card-guru{
+    width: 32%;
+}
+
+/* kotak-kelas siswa */
+.kotak-kelas-siswa{
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 10px;
+}
+.kotak-kelas-siswa .card{
+width: 32%;
+}
+.kotak-siswa .ma{
+    margin: 0px;
+    margin-top: 25px;
+    font-size: 14px;
+}
+.kotak-siswa .kelas{
+    margin: 0px;
+    font-size: 14px;
+}
+.kotak-siswa .nis{
+    margin: 0px;
+    margin-top: 7px;
+    font-size: 15px;
+}
+.kotak-siswa .nama{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+    /* margin-top: 25px; */
+}
+/* end-kotak-kelas siswa *24
+@media (max-width: 768px) {
+
+}
+
+/* Media query khusus untuk layar dengan lebar maksimal 480px (Smartphone) */
+@media (max-width: 480px) {
+    .kotak-admin{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+    .kotak-admin .kotak-card{
+        width: 48%;
+    }
+    /* end admin */
+
+    /* kotak guru */
+    .kotak-guru{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+    .kotak-guru .card-guru{
+        width: 90%;
+    }
+
+    /* kotak-kelas siswa */
+.kotak-kelas-siswa{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kotak-kelas-siswa .card{
+width: 90%;
+}
+}
