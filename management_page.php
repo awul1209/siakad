@@ -138,6 +138,14 @@ if (isset($_GET['page'])) {
             include 'admin/kriteria/del_kriteria.php';
             break;
 
+        case 'siswa-absen':
+            include 'admin/siswa/index_absensi.php';
+            break;
+        case 'data-siswa-absen':
+            include 'admin/siswa/data_siswa_absen.php';
+            break;
+
+
         //Penilaian
     
         case 'data-nilai':

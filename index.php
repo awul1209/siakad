@@ -358,6 +358,14 @@ function hari_ini()
 								</p>
 							</a>
 						</li>
+						<li class="nav-item has-treeview">
+							<a href="?page=siswa-absen" class="nav-link">
+								<img src="dist/img/abs.png" alt="" style="width: 23px;margin-left: 0px; margin-right: 4px;">
+								<p  style="color: #fff;">
+									Absensi
+								</p>
+							</a>
+						</li>
 						<!-- <li class="nav-item has-treeview">
 							<a href="?page=nilai-rata-rata" class="nav-link">
 								<img src="dist/img/module.png" alt="" style="width: 23px;margin-left: 0px; margin-right: 4px;">
