@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-sm-12">
                     <label class=" col-form-label">Jam</label>
-                    <input type="time" class="form-control" id="waktu" name="waktu"value="<?= $row['waktu'] ?>" required>
+                    <input type="text" class="form-control" id="waktu" name="waktu"value="<?= $row['waktu'] ?>" required>
                 </div>
             </div>    
 		</div>

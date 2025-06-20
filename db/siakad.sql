@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Jun 2025 pada 07.11
+-- Waktu pembuatan: 20 Jun 2025 pada 09.20
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.0.30
 
@@ -44,15 +44,9 @@ CREATE TABLE `absensi` (
 --
 
 INSERT INTO `absensi` (`id_absensi`, `jadwal_id`, `nama_siswa`, `kelas`, `tanggal`, `keterangan`, `nis`, `created_at`, `updated_at`) VALUES
-(34, 4, 'tolak', 'Kelas 10 B', '2025-06-03', 'Hadir', '12341', '2025-06-03 07:20:25', '2025-06-03 07:20:25'),
-(35, 4, 'Suprayitno', 'Kelas 10 B', '2025-06-03', 'Hadir', '721530003', '2025-06-03 07:20:25', '2025-06-03 07:20:25'),
-(36, 4, 'Amel', 'Kelas 10 B', '2025-06-03', 'Izin', '12343', '2025-06-03 07:20:25', '2025-06-03 07:20:25'),
-(37, 8, 'tolak', 'Kelas 10 B', '2025-06-18', 'Hadir', '12341', '2025-06-19 02:10:31', '2025-06-19 02:10:31'),
-(38, 8, 'Suprayitno', 'Kelas 10 B', '2025-06-18', 'Izin', '721530003', '2025-06-19 02:10:31', '2025-06-19 02:10:31'),
-(39, 8, 'Amel', 'Kelas 10 B', '2025-06-18', 'Hadir', '12343', '2025-06-19 02:10:31', '2025-06-19 02:10:31'),
-(40, 8, 'tolak', 'Kelas 10 B', '2025-06-19', 'Hadir', '12341', '2025-06-19 02:19:14', '2025-06-19 02:19:14'),
-(41, 8, 'Suprayitno', 'Kelas 10 B', '2025-06-19', 'Hadir', '721530003', '2025-06-19 02:19:14', '2025-06-19 02:19:14'),
-(42, 8, 'Amel', 'Kelas 10 B', '2025-06-19', 'Hadir', '12343', '2025-06-19 02:19:14', '2025-06-19 02:19:14');
+(43, 8, 'Wulan', 'Kelas 10 B', '2025-06-20', 'Izin', '123', '2025-06-20 06:21:05', '2025-06-20 06:21:05'),
+(44, 8, 'Suprayitno', 'Kelas 10 B', '2025-06-20', 'Hadir', '721530003', '2025-06-20 06:21:05', '2025-06-20 06:21:05'),
+(45, 8, 'Riyan', 'Kelas 10 B', '2025-06-20', 'Hadir', '1234', '2025-06-20 06:21:05', '2025-06-20 06:21:05');
 
 -- --------------------------------------------------------
 
@@ -99,7 +93,9 @@ INSERT INTO `guru` (`id_guru`, `nama_guru`, `nip`, `alamat`, `nohp`, `rl`, `pass
 (23, 'Ulfatul Ummamiyah', '3529076808990006', '-', '0', 'guru', 'guru'),
 (24, 'Khoirur Rosyid', '3529052704970006', 'Dusun Tegal, RT 04 RW 02, Pakandangan Barat Bluto  ', '0', 'guru', 'guru'),
 (25, 'Moh. Jayyit', '3529050202930002', 'Dusun Air Mata, RT 2 RW.1, Sera Timur Bluto', '0', 'guru', 'guru'),
-(26, 'Fairuzah', '3529054202810005', 'Dusun Sumber langon, RT.6 RW.3 Seratengah Bluto', '0', 'guru', 'guru');
+(26, 'Fairuzah', '3529054202810005', 'Dusun Sumber langon, RT.6 RW.3 Seratengah Bluto', '0', 'guru', 'guru'),
+(30, 'guru1', '087654321', 'Jalan Raya Manding', '0876452321', 'guru', 'guru1'),
+(31, 'guru2', '8935734623', 'Jalan Raya Gapura Beraji', '09873473435', 'guru', 'guru2');
 
 -- --------------------------------------------------------
 
@@ -121,17 +117,16 @@ CREATE TABLE `jadwal` (
 --
 
 INSERT INTO `jadwal` (`id_jadwal`, `hari`, `matpel_id`, `kelas_id`, `guru_id`, `waktu`) VALUES
-(4, 'Selasa', 1, 5, 2, '07:00'),
-(5, 'Rabu', 4, 5, 4, '09:30'),
+(4, 'Selasa', 1, 5, 30, '07:30 - 08:45'),
+(5, 'Rabu', 4, 5, 31, '07:30 - 08:45'),
 (6, 'Rabu', 2, 4, 8, '07:00 - 08:30'),
 (7, 'Rabu', 2, 5, 8, '09:00 - 11:00'),
-(8, 'Kamis', 3, 5, 2, '07:30'),
+(8, 'Senin', 3, 5, 2, '07:30 - 08:45'),
 (9, 'Senin', 4, 4, 8, '07:00 - 08:30'),
 (10, 'Selasa', 6, 4, 8, '09:00 - 11:00'),
 (11, 'Kamis', 2, 1, 8, '12:00 - 13:00'),
-(12, 'Jumat', 5, 5, 11, '10:00'),
-(13, 'Kamis', 6, 5, 10, '12:00 - 14:00'),
-(14, 'Kamis', 14, 5, 6, '12:00 - 14:00');
+(15, 'Senin', 3, 4, 2, '09.00-11.00'),
+(16, 'Senin', 1, 5, 30, '09.00-11.00');
 
 -- --------------------------------------------------------
 
@@ -375,12 +370,11 @@ INSERT INTO `siswa` (`id_siswa`, `nis`, `nama_siswa`, `jenis_kelamin`, `alamat`,
 (44, '867', 'WARDA AL FAFA', 'perempuan', 'Sera Timur', 3),
 (45, '881', 'ZAINAL ARIF', 'laki-laki', 'Talang', 3),
 (46, '882', 'MEYSHA CINDY AFRIDA', 'perempuan', 'Gung-Gung Timur', 3),
-(47, '720520012', 'awul', 'laki-laki', 'Paberasan', 4),
-(48, '720520013', 'wulan', 'perempuan', 'Parsanga', 4),
-(49, '12341', 'tolak', 'perempuan', 'kalianget', 5),
+(47, '720520012', 'Ayyub', 'laki-laki', 'Paberasan', 4),
+(48, '720520013', 'Andrian', 'laki-laki', 'Parsanga', 4),
+(49, '123', 'Wulan', 'perempuan', 'kalianget', 5),
 (50, '721530003', 'Suprayitno', 'laki-laki', 'saronggi', 5),
-(51, '720520014', 'Sriwulan', 'perempuan', 'Saronggi', 4),
-(52, '12343', 'Amel', 'perempuan', 'batuputih', 5);
+(52, '1234', 'Riyan', 'laki-laki', 'batuputih', 5);
 
 --
 -- Indexes for dumped tables
@@ -459,19 +453,19 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_absensi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT untuk tabel `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id_guru` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_guru` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT untuk tabel `jadwal`
 --
 ALTER TABLE `jadwal`
-  MODIFY `id_jadwal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_jadwal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `kelas`

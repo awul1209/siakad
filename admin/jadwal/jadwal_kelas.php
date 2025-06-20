@@ -130,8 +130,11 @@
 									<?php echo $data['waktu']; ?>
 								</td>
 								<td>
-								
-									
+									<a href="index.php?page=absensi-siswa&kode=<?= $data['id_jadwal'] ?>" title="absensi"
+									class="btn bg-gradient-warning btn-sm">
+									<h3 class="card-title">
+										<i class="fa fa-edit"></i> Absensi</h3>
+									</a>
 									<a href="index.php?page=absen-guru&id=<?= $data['id_jadwal'] ?>" title="edit absen"
 									class="btn bg-gradient-primary  btn-sm">
 									<h3 class="card-title">
